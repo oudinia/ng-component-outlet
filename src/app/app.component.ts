@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import {GroupsComponent} from './groups/groups.component';
+import {TeamsComponent} from './teams/teams.component';
+import {WorldCupStatusComponent} from './world-cup-status/world-cup-status.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+
+  GroupsComponent = GroupsComponent;
+  TeamsComponent = TeamsComponent;
+  WorldCupStatusComponent = WorldCupStatusComponent;
+
+
 }

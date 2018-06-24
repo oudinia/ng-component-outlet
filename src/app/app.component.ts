@@ -13,7 +13,7 @@ export class AppComponent {
 
   constructor(public widgetsService: WidgetsService, public context: Context, public injector: Injector) {
 
-    this.context.contextProp = 15464565;
+    this.context.componentId = 15464565;
     this.componentsMap = this.widgetsService.getComponents();
     console.log(this.componentsMap);
     const inputs = [{provide: 'Context', useValue: this.context}];

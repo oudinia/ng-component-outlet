@@ -7,11 +7,8 @@ import {WorldCupStatusComponent} from './world-cup-status/world-cup-status.compo
   providedIn: 'root'
 })
 export class WidgetsService {
-
-
   getComponents() {
     const map = new Map<string, any>();
-
 
     map.set('Groups', GroupsComponent);
     map.set('Teams', TeamsComponent);
@@ -25,5 +22,5 @@ export class WidgetsService {
   providedIn: 'root'
 })
 export class Context {
-  public contextProp : number;
+  public componentId : number;
 }

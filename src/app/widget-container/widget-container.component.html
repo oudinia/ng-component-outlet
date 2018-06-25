@@ -1,0 +1,8 @@
+<p>
+  widget-container works!
+</p>
+
+  <div *ngFor="let w of widgets">
+    <ng-container *ngComponentOutlet="w.component; injector: getInjector(w.context) "></ng-container>
+  </div>
+

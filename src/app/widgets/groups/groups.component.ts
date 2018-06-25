@@ -1,5 +1,5 @@
 import {Component, Injector, OnInit} from '@angular/core';
-import {Context} from '../widgets.service';
+import {WidgetContext, WidgetContextService} from '../context.service';
 
 @Component({
   selector: 'app-groups',
@@ -7,11 +7,13 @@ import {Context} from '../widgets.service';
   styleUrls: ['./groups.component.scss']
 })
 export class GroupsComponent implements OnInit {
-  public context: Context;
+  public context: WidgetContextService;
   constructor(private injector: Injector) { }
 
   ngOnInit() {
-    this.context =  this.injector.get(Context);
+    console.log(this.injector);
+    this.context =  this.injector.get(WidgetContextService);
+    console.log('context in groups component', this.context);
   }
 
 }

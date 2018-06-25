@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Injector, OnInit} from '@angular/core';
+import {WidgetContextService} from '../context.service';
 
 @Component({
   selector: 'app-world-cup-status',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorldCupStatusComponent implements OnInit {
 
-  constructor() { }
+  public context: WidgetContextService;
+  constructor(private injector: Injector) { }
 
   ngOnInit() {
+    console.log(this.injector);
+    this.context =  this.injector.get(WidgetContextService);
+    console.log('context in WorldCupStatus component', this.context);
   }
 
 }
